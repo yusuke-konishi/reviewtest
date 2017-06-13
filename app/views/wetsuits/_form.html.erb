@@ -1,0 +1,25 @@
+<%= form_for(@wetsuit) do |f| %>
+  <% if @wetsuit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wetsuit.errors.count, "error") %> prohibited this wetsuit from being saved:</h2>
+
+      <ul>
+      <% @wetsuit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :maker %><br>
+    <%= f.text_field :maker %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

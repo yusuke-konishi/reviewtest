@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wetsuits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Maker</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wetsuits.each do |wetsuit| %>
+      <tr>
+        <td><%= wetsuit.maker %></td>
+        <td><%= wetsuit.type %></td>
+        <td><%= link_to 'Show', wetsuit %></td>
+        <td><%= link_to 'Edit', edit_wetsuit_path(wetsuit) %></td>
+        <td><%= link_to 'Destroy', wetsuit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wetsuit', new_wetsuit_path %>
