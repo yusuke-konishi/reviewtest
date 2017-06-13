@@ -1,0 +1,29 @@
+<%= form_for(@surfboard) do |f| %>
+  <% if @surfboard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@surfboard.errors.count, "error") %> prohibited this surfboard from being saved:</h2>
+
+      <ul>
+      <% @surfboard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :shaper %><br>
+    <%= f.text_field :shaper %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

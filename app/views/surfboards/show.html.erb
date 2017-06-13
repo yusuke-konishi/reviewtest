@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @surfboard.model %>
+</p>
+
+<p>
+  <strong>Shaper:</strong>
+  <%= @surfboard.shaper %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @surfboard.company %>
+</p>
+
+<%= link_to 'Edit', edit_surfboard_path(@surfboard) %> |
+<%= link_to 'Back', surfboards_path %>

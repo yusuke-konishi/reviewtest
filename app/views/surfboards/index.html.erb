@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surfboards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Shaper</th>
+      <th>Company</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surfboards.each do |surfboard| %>
+      <tr>
+        <td><%= surfboard.model %></td>
+        <td><%= surfboard.shaper %></td>
+        <td><%= surfboard.company %></td>
+        <td><%= link_to 'Show', surfboard %></td>
+        <td><%= link_to 'Edit', edit_surfboard_path(surfboard) %></td>
+        <td><%= link_to 'Destroy', surfboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Surfboard', new_surfboard_path %>
