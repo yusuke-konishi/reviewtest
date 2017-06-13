@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Maker:</strong>
+  <%= @wetsuit.maker %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @wetsuit.type %>
+</p>
+
+<%= link_to 'Edit', edit_wetsuit_path(@wetsuit) %> |
+<%= link_to 'Back', wetsuits_path %>
